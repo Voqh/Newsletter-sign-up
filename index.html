@@ -14,7 +14,7 @@
 <body>
 
   <!-- Sign-up form start -->
-  
+
 <main id="main" class="main">
 <header class="header-img">
 </header>
@@ -38,33 +38,34 @@
     </li>
   </ul>
 </div>
-<div class="email-sec">
+<form class="email-sec" id="my-form">
   <label class="email-label">
    Email address
   </label>
-  <input type="email" placeholder="email@company.com" id="email">
+  <span id="error-msg"></span>
+  <input type="email" placeholder="email@company.com" id="email" required>
   
-  <button type="submit" id="sub-btn">
+  <button type="submit" id="sub-btn" type="submit" onclick="validateEmail()">
    Subscribe to monthly newsletter
   </button>
-</div>
+</form>
 </section>
 </main>
 
   <!-- Sign-up form end -->
-<!--
-<section id="success-msg">
+
+<section id="success-msg"class ="display">
   <span class="tick-icon"><img src="./assets/images/icon-success.svg" alt="tick icon"></span>
   <h2 class="success-msg-header">
    Thanks for subscribing!
   </h2>
   <p>
-    A confirmation email has been sent to<a href="/">   ash@loremcompany.com.</a>Please open it and click the button inside to confirm your subscription.
+    A confirmation email has been sent to <a href="/" id="email-filler"></a>. Please open it and click the button inside to confirm your subscription.
   </p>
-  <button id="success-msg-btn">
+  <button id="success-msg-btn" onclick="update()">
    Dismiss message
   </button>
 </section>
--->
+<script src="./index.js"></script>
 </body>
 </html>

@@ -10,6 +10,15 @@ body{
   font-weight: 400;
   width: 100vw;
   height: 100vh;
+  color:hsl(234, 29%, 20%);
+}
+.display{
+  display: none;
+}
+a{
+  color: hsl(234, 29%, 20%);
+  text-decoration: none;
+  font-weight: 600;
 }
 ul{
   list-style: none;
@@ -36,6 +45,7 @@ li::before {
 
 input{
   border: 1px solid hsl(231, 7%, 60%);
+  cursor: pointer;
 }
 input, #sub-btn{
   margin-top: 20px;
@@ -47,8 +57,25 @@ button{
   color:  hsl(0, 0%, 100%);
   background-color:hsl(234, 29%, 20%);
   border: 1px solid hsl(234, 29%, 20%);
+  cursor: pointer;
 }
 
+button:hover{
+  box-shadow: 0px 8px 20px hsla(4, 100%, 67%, 0.521);
+  background-color: hsl(4, 100%, 67%);
+  border: none;
+}
+.email-sec{
+  position: relative;
+}
+#error-msg{
+  position: absolute;
+  left: 65%;
+  color: hsl(4, 100%, 67%);
+}
+.display{
+  display: none;
+}
 @media(min-width:375px){
 body{
   display: grid;
@@ -56,13 +83,16 @@ body{
   justify-content: center;
   background-color: hsl(234, 29%, 20%);
 }
-main{
+.main{
   display: grid;
   grid-template-columns: 1fr 320px;
   margin: auto;
   height: 75%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
+  }
+  .middle-sec p{
+    margin-top: 10px;
   }
 .header-img{
   grid-column:2/3 ;
@@ -85,6 +115,41 @@ main{
   display: flex;
   flex-direction: column;
 }
+.success-msg{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  height: 50vh;
+}
+#success-msg-btn{
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.tick-icon{
+  margin: 10px 20px;
+  padding: 10px;
+}
+.success-msg-header{
+  margin:0px 20px 10px 20px;
+  padding: 0 10px 10px 10px;
+  color: hsl(234, 29%, 20%);
+}
+.success-msg p{
+  margin:0px 40px 10px 20px;
+  padding: 0 10px 10px 10px;
+}
+.success-msg-btn{
+  margin:0px 40px 40px 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+}
+
 }
 @media(max-width:375px){
 .header-img{
@@ -117,24 +182,26 @@ h2{
 label{
   font-weight: 500;
 }
-#success-msg{
+.success-msg{
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items:start;
 
 }
-#success-msg *{
+.success-msg *{
   padding: 10px;
   margin: 10px;
 }
-#success-msg-btn{
+.success-msg-btn{
   width: 95%;
   border-radius: 8px;
 }
 a{
   text-decoration: none;
 }
-
+#error-msg{
+  font-size: small;
+}
 }
 
