@@ -162,7 +162,8 @@ body{
 .main{
 display: grid;
 grid-template-columns: 1fr;
-margin-bottom:20px;
+align-items: center;
+justify-content: center;
 }
 .middle-sec{
   margin: 20px;
@@ -185,18 +186,18 @@ label{
 .success-msg{
 display: flex;
 flex-direction: column;
-justify-content: flex-start;
-align-items:start;
-text-align: center;
+justify-content: center;
+align-items:flex-start;
 
 }
 .success-msg *{
   padding: 10px;
   margin: 10px;
 }
-.success-msg-btn{
-  width: 95%;
+#success-msg-btn{
+  width: 80%;
   border-radius: 8px;
+  align-self: center;
 }
 a{
   text-decoration: none;
